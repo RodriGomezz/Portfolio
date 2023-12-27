@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-margin: 6.5rem;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+html {
+  font-size: 10px;
+  color: #fff;
+  background-color: #030707;
+}
+
+.navbar {
+  box-sizing: border-box;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 6rem;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.menuOption {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+.menuOption:hover {
+  background-color: #0e76a8;
+  border-radius: 10rem;
+  padding: 0.5rem;
+}
+
+.hamburger,
+.cross {
+  opacity: 0;
+  background-color: transparent;
+  border: none;
+  right: 10%;
+  position: fixed;
+  z-index: 1;
+  pointer-events: none;
+  &.hamburger * {
+    height: 7rem;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.cross {
+  pointer-events: none;
+  &.cross * {
+    height: 7rem;
+  }
+}
+
+#home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.introduction {
+  font-size: 2.7rem;
+  width: 48rem;
+}
+
+.myName {
+  font-size: 2.7rem;
+  color: #0e76a8;
+}
+
+.picture {
+  height: 40rem;
+  background: linear-gradient(#283c86, #45a247);
+  padding-top: 3rem;
+  animation: animate 5s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+}
+
+.pictureAndContact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+@keyframes animate {
+  0% {
+    border-radius: 60% 40% 30% 70% / 80% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 80% 30% 70% 40%;
+  }
+}
+
+#about {
+  background-color: rgb(10, 10, 83);
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.presentation {
+  font-size: 2.1rem;
+  margin-bottom: 5rem;
+}
+
+h2 {
+  font-size: 31px;
+}
+
+.imgStack {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.imgLogo {
+  height: 6rem;
+  width: 6rem;
+}
+
+.logo:nth-child(2) {
+  transition-delay: 200ms;
+}
+.logo:nth-child(3) {
+  transition-delay: 300ms;
+}
+.logo:nth-child(4) {
+  transition-delay: 400ms;
+}
+.logo:nth-child(5) {
+  transition-delay: 500ms;
+}
+.logo:nth-child(6) {
+  transition-delay: 600ms;
+}
+.logo:nth-child(7) {
+  transition-delay: 700ms;
+}
+.logo:nth-child(8) {
+  transition-delay: 800ms;
+}
+.logo:nth-child(9) {
+  transition-delay: 900ms;
+}
+.logo:nth-child(10) {
+  transition-delay: 1000ms;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.stackText {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.certificateText {
+  margin-top: 50px;
+  font-size: 13px;
+}
+
+/* Projects */
+
+#projects {
+  display: grid;
+  grid-template-columns: 70rem 70rem;
+  gap: 7rem;
+  place-content: center;
+  margin: 15rem 0;
+}
+
+.titleProjects {
+  grid-column: 1/-1;
+  text-align: center;
+  font-size: 3.7rem;
+}
+
+.projectContainer:nth-child(2) {
+  transition-delay: 200ms;
+}
+.projectContainer:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+.projectContainer {
+  border-radius: 1.2rem;
+  height: 100%;
+  background-color: rgb(20, 20, 20);
+}
+
+.project {
+  height: 45rem;
+  width: 100%;
+  border-radius: 1.2rem 1.2rem 0 0;
+}
+
+.projectTitle {
+  margin-bottom: 16px;
+}
+
+.projectText {
+  padding: 3rem 4rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 290px;
+  box-sizing: border-box;
+}
+
+.iconsProject {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons * {
+  width: 3.5rem;
+}
+
+.btnProject {
+  display: flex;
+  gap: 2rem;
+}
+
+.btn {
+  display: grid;
+  place-content: center;
+  background-color: azure;
+  border-radius: 1.6rem;
+  width: 6rem;
+  height: 3.3rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 3px 10px 0px rgba(206, 206, 206, 0.5);
+}
+
+.btn:hover {
+  background-color: #a9b6b6;
+}
+
+.iconWeb {
+  height: 2.3rem;
+}
+
+#contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 10rem;
+}
+.contact {
+  padding-top: 60px;
+}
+
+.contact * {
+  font-size: 3rem;
+}
+
+.contactImg {
+  width: 40px;
+  height: 40px;
+  padding-left: 5px;
+}
+
+.mailContacts {
+  display: flex;
+}
+
+.mailContact {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 60rem;
+  padding: 3rem;
+  border-radius: 1rem;
+  margin-top: 3rem;
+}
+
+.mailContact * {
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: aliceblue;
+}
+
+.inputContact {
+  height: 5rem;
+}
+
+.btnMail {
+  background-color: #eee;
+  cursor: pointer;
+  &:hover {
+    background-color: #182450;
+    color: aliceblue;
+  }
+}
+
+@media (max-width: 1450px) {
+  #projects {
+    grid-template-columns: minmax(30rem, 70rem);
+  }
+  #home {
+    gap: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  body,
+  html {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .hamburger {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  #home {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+  }
+
+  .introduction {
+    width: 30rem;
+  }
+  .imgStack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact * {
+    font-size: 2.3rem;
+  }
+
+  .contactImg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.colorText {
+  color: #0e76a8;
+  font-weight: 700;
+  font-size: 4.3rem;
+}
+
+.hamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+  background-color: #202020;
+  opacity: 1;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  & .menuOption {
+    font-size: 2.3rem;
+    pointer-events: all;
+    animation: textOpacity 1s ease-in-out;
+  }
+  animation: hamburgerMenuTransition 0.8s ease-in-out;
+}
+
+@keyframes hamburgerMenuTransition {
+  0% {
+    width: 0%;
+    padding: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+@keyframes textOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.show {
+  opacity: 1;
+  z-index: 2;
+}
